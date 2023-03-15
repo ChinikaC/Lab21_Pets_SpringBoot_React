@@ -30,13 +30,24 @@ const PetsContainer = () => {
         setPets([...pets, savedPets]);
     }
 
+    const deletePets = async (id) => {
+        await fetch(`http://localhost:8080/pets/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        loadPetData();
+    }
+
     return(
         <>
             <PetsForm 
             pets={pets}
             onSubmit={postPets}
             />
-            <PetsList pets={pets}/>
+            <PetsList pets={pets}
+            onDelete={deletePets}/>
         </>
     )
 

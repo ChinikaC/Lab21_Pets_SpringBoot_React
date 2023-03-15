@@ -1,11 +1,12 @@
 import Pets from "./Pets"
 
-const PetsList = ({pets}) => {
+const PetsList = ({pets, onDelete}) => {
 
     const petsComponents = pets.map(pets => {
         return <Pets
         key={pets.id}
         pets={pets}
+        onDelete={onDelete}
         />
     });
 
