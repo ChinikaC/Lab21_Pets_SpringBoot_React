@@ -29,7 +29,8 @@ const PetsForm = ({pets, onSubmit}) => {
 
     return(
         <form id="pets-form" onSubmit={handleFormSubmit}>
-            <h3>Add a new Pet!</h3>
+            <h3>Add a New Pet Below:
+            </h3>
 
             <label htmlFor="pet-name">Pet Name:</label>
             <input 

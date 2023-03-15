@@ -7,11 +7,11 @@ const Pets = ({pets, onDelete}) => {
    
     return(
         <div className="pets">
-            <h4>{pets.name}</h4>
-            <p>Name: {pets.name}</p>
-            <p>Type: {pets.type}</p>
-            <p>Breed: {pets.breed}</p>
-            <p>Age: {pets.age}</p>
+            <h4><u>{pets.name}</u></h4>
+            <p><b>Name:</b> {pets.name}</p>
+            <p><b>Type:</b> {pets.type}</p>
+            <p><b>Breed:</b> {pets.breed}</p>
+            <p><b>Age:</b> {pets.age}</p>
             <button onClick={handleDeleteClick}>Delete</button>
         </div>  
     )
